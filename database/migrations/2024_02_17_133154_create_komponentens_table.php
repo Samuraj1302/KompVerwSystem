@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('komponentens', function (Blueprint $table) {
             $table->id();
+            $table->string('typenbezeichnung');
+            $table->string('zustand');
             $table->timestamps();
         });
     }
