@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('ausleihhistories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('komponenten_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('bezeichner_id')->constrained()->cascadeOnDelete();
+            $table->date('ausleihdatum');
+            $table->date('rückgabedatum');
+            $table->string('ausleihstatus');
             $table->timestamps();
         });
     }
