@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('komponentens', function (Blueprint $table) {
             $table->id();
             $table->string('typenbezeichnung');
-            $table->foreignId('kategorie_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('unterkategorie_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('lagerort_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('ausleihhistorie_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('kategoriens_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('unterkategoriens_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('lagerorts_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('ausleihhistories_id')->nullable()->constrained()->cascadeOnDelete();
             $table->string('zustand');
             $table->timestamps();
         });

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('unterkategoriens', function (Blueprint $table) {
             $table->id();
             $table->string('unterkategorie');
-            $table->foreignId('kategorie_id')->constrained()->cascadeOnDelete();
+            //$table->foreignId('kategorien_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

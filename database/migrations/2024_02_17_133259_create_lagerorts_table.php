@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('lagerorts', function (Blueprint $table) {
             $table->id();
-            $table->string('raum');
-            $table->string('schrank')->nullable();
+            $table->string('lagerort');
+            /*$table->string('schrank')->nullable();
             $table->string('stellplatz')->nullable();
-            $table->foreignId('komponenten_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('komponenten_id')->constrained()->cascadeOnDelete();*/
             $table->timestamps();
         });
     }
