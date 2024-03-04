@@ -25,7 +25,7 @@ class AusleihhistorieResource extends Resource
 
     protected static ?string $navigationLabel = 'Ausleihhistorie';
 
-    protected static ?string $slug = 'Ausleihistorie';
+    protected static ?string $slug = 'Ausleihhistorie';
 
     protected static ?string $title = 'Ausleihhistorie';
 
@@ -113,7 +113,7 @@ class AusleihhistorieResource extends Resource
         return [
             'index' => Pages\ListAusleihhistories::route('/'),
             'create' => Pages\CreateAusleihhistorie::route('/create'),
-            'edit' => Pages\EditAusleihhistorie::route('/{record}/edit'),
+            'edit' => Pages\EditAusleihhistorie::route('/{record}/edit'), 
         ];
     }
 }
